@@ -12,6 +12,7 @@ import LineGraph from "./LineGraph";
 import Table from "./Table";
 import { sortData } from "./util";
 import Map from "./Map";
+import numeral from "numeral";
 
 const App = () => {
   const [country, setInputCountry] = useState("worldwide");
