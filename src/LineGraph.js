@@ -3,8 +3,10 @@ import { Line } from "react-chartjs-2";
 import numeral from "numeral";
 
 const options = {
+  plugins:{
   legend: {
-    display: false,
+    display:false,
+    },
   },
   elements: {
     point: {
@@ -24,18 +26,22 @@ const options = {
   scales: {
     xAxes: [
       {
+        labels:'abc',
         type: "time",
         time: {
           format: "MM/DD/YY",
           tooltipFormat: "ll",
+          legend:false,
         },
       },
     ],
     yAxes: [
       {
+        labels:'abc',
         gridLines: {
           display: false,
         },
+        legend:false,
         ticks: {
           // Include a dollar sign in the ticks
           callback: function (value, index, values) {
@@ -90,7 +96,7 @@ function LineGraph({ casesType = "cases" }) {
           data={{
             datasets: [
               {
-                backgroundColor: "rgba(204, 16, 52, 0.5)",
+                backgroundFromGradient:'#f1f8e9',
                 borderColor: "#CC1034",
                 data: data,
               },
